@@ -28,23 +28,6 @@ $sitename = $app->getCfg('sitename');
 // Add current user information
 $user = JFactory::getUser();
 
-if ($this->countModules('position-5') && $this->countModules('position-8'))
-{
-  $span = "col-md-4";
-}
-elseif ($this->countModules('position-5') && !$this->countModules('position-8'))
-{
-  $span = "col-md-9";
-}
-elseif (!$this->countModules('position-7') && $this->countModules('position-8'))
-{
-  $span = "col-md-9";
-}
-else
-{
-  $span = "col-md-12";
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -52,8 +35,8 @@ else
   <head>
     <title>FabLab Karlsruhe V.i.G.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="templates/fablabka2/css/bootstrap.css" rel="stylesheet">
-    <link href="templates/fablabka2/css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -61,6 +44,7 @@ else
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <style>
+      
     img  {
       max-width:100%;
       height:auto;
@@ -88,7 +72,12 @@ else
         </div>
         <div id="content">
           <div class="row">
-            Content
+            <div class="col-md-9">
+              Content
+            </div>
+            <div class="col-md-3">
+              Sidebar
+            </div>
           </div>
         </div> 
     </div>       
